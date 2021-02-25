@@ -46,6 +46,7 @@ Remember to `bundle install`
   * A new [View](app/views/restaurants/qr_code.html.erb)
 
 Now, we can go to http://localhost:3000/restaurants/1/qr_code and see the QR code!
+If you want to read this QR code with your smartphone, the app must be online (not on localhost).
 
 ---
 
