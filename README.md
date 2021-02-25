@@ -1,6 +1,6 @@
 # GOAL
 
-This is a demo to show-case how to implement .
+This is a demo to show-case how to create a qr code that helps you navigate through the app.
 
 [You can also check my other demos](https://github.com/andrerferrer/dedemos/blob/master/README.md#ded%C3%A9mos).
 
