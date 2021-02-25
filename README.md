@@ -9,8 +9,40 @@ This is a demo to show-case how to implement .
 ### 1. Add the gem
 ```ruby
 # Gemfile
-gem ''
+gem 'rqrcode'
 ```
+
+### 2. Create a new feature to display the QR code
+  * A new Route
+  ```ruby
+  # config/routes.rb
+    resources :restaurants do
+      member do
+        get :qr_code
+      end
+    end
+  ```
+  * A new Controller#Action
+  ```ruby
+  # app/controllers/restaurants_controller.rb
+  require 'rqrcode'
+  class RestaurantsController < ApplicationController
+    def qr_code
+      @restaurant = Restaurant.find(params[:id])
+
+      # this comes from the documentation
+      qrcode = RQRCode::QRCode.new(restaurant_url(@restaurant))
+      @svg = qrcode.as_svg(
+        offset: 0,
+        color: '000',
+        shape_rendering: 'crispEdges',
+        module_size: 6,
+        standalone: true
+      )
+    end
+  end
+  ```
+  * A new [View](app/views/restaurants/qr_code.html.erb)
 
 Remember to `bundle install`
 
