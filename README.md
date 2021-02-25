@@ -11,6 +11,7 @@ This is a demo to show-case how to implement .
 # Gemfile
 gem 'rqrcode'
 ```
+Remember to `bundle install`
 
 ### 2. Create a new feature to display the QR code
   * A new Route
@@ -44,7 +45,9 @@ gem 'rqrcode'
   ```
   * A new [View](app/views/restaurants/qr_code.html.erb)
 
-Remember to `bundle install`
+Now, we can go to http://localhost:3000/restaurants/1/qr_code and see the QR code!
+
+---
 
 And we're good to go 🤓
 Good Luck and Have Fun
