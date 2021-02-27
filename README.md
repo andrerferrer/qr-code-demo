@@ -1,12 +1,12 @@
 # GOAL
 
-This is a demo to show-case how to create a qr code that helps you navigate through the app.
+This is a demo to show-case how to create a qr code that helps you navigate through the app with the [rqrcode gem](https://github.com/whomwah/rqrcode).
 
 [You can also check my other demos](https://github.com/andrerferrer/dedemos/blob/master/README.md#ded%C3%A9mos).
 
 ## What needs to be done?
 
-### 1. Add the gem
+### 1. [Add the gem](https://github.com/whomwah/rqrcode).
 ```ruby
 # Gemfile
 gem 'rqrcode'
@@ -46,9 +46,11 @@ Remember to `bundle install`
   * A new [View](app/views/restaurants/qr_code.html.erb)
 
 Now, we can go to http://localhost:3000/restaurants/1/qr_code and see the QR code!
+
 If you want to read this QR code with your smartphone, the app must be online (not on localhost).
 
 ---
 
 And we're good to go 🤓
+
 Good Luck and Have Fun
